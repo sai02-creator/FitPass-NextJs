@@ -1,4 +1,15 @@
 import { Button } from "@/components/ui/button";
+import {
+  Dumbbell,
+  Heart,
+  Bike,
+  Flame,
+  Zap,
+  MapPin,
+  Check,
+  ArrowRight,
+  Sparkles,
+} from "lucide-react";
 
 const categories = [
   { name: "Yoga", icon: Heart, classes: "2,400+", color: "text-rose-500" },
