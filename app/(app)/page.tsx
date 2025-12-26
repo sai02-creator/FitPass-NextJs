@@ -148,6 +148,39 @@ export default function Home() {
 
 
       {/* Categories */}
+       <section className="container mx-auto px-4 py-20 md:py-28">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Find Your Perfect Workout
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            From high-intensity training to mindful movement, explore classes
+            that match your fitness goals.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {categories.map((category) => (
+            <Card
+              key={category.name}
+              className="group cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-primary/50 hover:-translate-y-1"
+            >
+              <CardContent className="p-6 text-center">
+                <div
+                  className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-muted mb-4 group-hover:scale-110 transition-transform duration-300 ${category.color}`}
+                >
+                  <category.icon className="w-7 h-7" />
+                </div>
+                <h3 className="font-semibold text-lg mb-1">{category.name}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {category.classes} classes
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
 
       {/* Steps */}
 
